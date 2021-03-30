@@ -13,6 +13,10 @@ const core = require('@actions/core')
 const { runnerIsActions } = require('./lib/utils')
 const ignore = require('ignore')
 
+const semver = require('semver')
+
+const v = semver.prerelease("1.2.3-alpha.23")
+
 module.exports = (app, { getRouter }) => {
   const event = runnerIsActions() ? '*' : 'push'
 

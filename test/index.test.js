@@ -128,11 +128,11 @@ describe('release-drafter', () => {
             .reply(200, require('./fixtures/graphql-commits-no-prs.json'))
 
           nock('https://api.github.com')
-            .get('/repos/toolmantim/release-drafter-test-project/releases')
+            .get('/repos/mtribes/client-roku/releases')
             .query(true)
             .reply(200, [require('./fixtures/release')])
             .post(
-              '/repos/toolmantim/release-drafter-test-project/releases',
+              '/repos/mtribes/client-roku/releases',
               (body) => {
                 expect(body).toMatchInlineSnapshot(`
                   Object {
@@ -425,7 +425,7 @@ describe('release-drafter', () => {
 
         nock('https://api.github.com')
           .post(
-            '/repos/toolmantim/release-drafter-test-project/releases',
+            '/repos/toolmantim/mtribes/client-roku/releases',
             (body) => {
               expect(body).toMatchInlineSnapshot(`
                 Object {
@@ -2366,10 +2366,10 @@ describe('release-drafter', () => {
 
                 ## Previous release
 
-                v2.0.0
+                v2.0.0-alpha.5
                 ",
                   "draft": true,
-                  "name": "v2.0.1 🌈",
+                  "name": "v2.0.0-alpha.6 🌈",
                   "prerelease": false,
                   "tag_name": "v2.0.1",
                   "target_commitish": "",

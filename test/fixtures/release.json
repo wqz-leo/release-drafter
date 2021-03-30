@@ -5,9 +5,9 @@
   "html_url": "https://github.com/toolmantim/release-drafter-test-project/releases/tag/v2.0.0",
   "id": 11691725,
   "node_id": "MDc6UmVsZWFzZTExNjkxNzI1",
-  "tag_name": "v2.0.0",
+  "tag_name": "v1.2.3-alpha.45",
   "target_commitish": "master",
-  "name": "v2.0.0 (✏️ Code Name)",
+  "name": "v1.2.3-alpha.45 (✏️ Code Name)",
   "draft": false,
   "author": {
     "login": "release-drafter[bot]",
