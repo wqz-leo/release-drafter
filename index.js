@@ -15,7 +15,7 @@ const ignore = require('ignore')
 
 const semver = require('semver')
 
-const v = semver.prerelease("1.2.3-alpha.23")
+// const v = semver.prerelease("1.2.3-alpha.23")
 
 module.exports = (app, { getRouter }) => {
   const event = runnerIsActions() ? '*' : 'push'
@@ -197,6 +197,11 @@ module.exports = (app, { getRouter }) => {
       })
     } else {
       log({ context, message: 'Updating existing release' })
+
+      log({ context, message: `releaseInfo.tag: ${releaseInfo.tag}` })
+      log({ context, message: `releaseInfo.name: ${releaseInfo.name}` })
+      log({ context, message: `draftRelease.tag: ${draftRelease.tag}` })
+      log({ context, message: `draftRelease.name: ${draftRelease.name}` })
       createOrUpdateReleaseResponse = await updateRelease({
         context,
         draftRelease,
