@@ -196,7 +196,7 @@ module.exports = (app, { getRouter }) => {
         config,
       })
     } else {
-      log({ context, message: 'Updating existing release' })
+      log({ context, message: 'Updating existing release laskdf' })
 
       log({ context, message: `releaseInfo.tag: ${releaseInfo.tag}` })
       log({ context, message: `releaseInfo.name: ${releaseInfo.name}` })
